@@ -1,0 +1,44 @@
+<resources>
+    <string name="hello_blank_fragment">HELLO EVERYONE</string>
+    <string name="app_name">CHAMPIONS LEAGUE</string>
+    <string name="strlogoArteLista">Champions League</string>
+    <string name="hUserName">User</string>
+    <string name="hPassword">Password</string>
+    <string name="strContrasenia">Password</string>
+    <string name="strIniciarSesion">Login</string>
+    <string name="strNoTieneCuenta">Don\'t have an account?</string>
+    <string name="strCreaUna">Create one here</string>
+    <string name="hemail">Email</string>
+    <string name="hConfirmarPassword">Confirm password</string>
+    <string name="strCrearCuenta">Create an account</string>
+    <string name="strTituloHome">We all want the championship and we will fight for it, of course</string>
+    <string name="strTituloHomeVistas">Barcelona will win the next champions league, we are all confident</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="strArtista">Artist</string>
+    <string name="strEvento">Spring in Oil Exhibition</string>
+    <string name="strGaleria">Gallery</string>
+    <string name="strNombreArtista">Argentina Vargas</string>
+    <string name="strTituloArte">One Thousand and One Nights</string>
+    <string name="strMeGusta">I like</string>
+    <string name="strPrecioPintura">1,200.00</string>
+    <string name="strMoneda">$</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="strDescripcionArte">Carlos PardoTasies was born in San Jose, Costa Rica in 1952, by chance of life since his family lives in Puerto Limon, province of the country where he grew up until he was 6 years old. Since he was a child he was impressed by the colors of the province inhabited mostly by black people. He began to draw from a very young age the boats of the dock and the shacks of the place. The impact of the color of the fruits, the sunrises and the shades used in the houses</string>.
+    <string name="strCategoria">Oil</string>
+
+
+    <string name="strNombreArtistaPerfil">Rodrigo Matus Lazo</string>
+    <string name="strCiudad">Managua, Nicaragua</string>
+    <string name="strAcercaDeMi">About me</string>
+    <string name="strNombreTwitter">\@RafaelLopez</string>
+    <string name="strDescripcionQuienSoy">I was born in the capital of Nicaragua, my passion has been oil painting, being my favorite oil paintings. As a child I was initiated in painting in a natural way, then I was perfecting my technique in professional schools. I have more than 10 years of experience in painting.</string>
+    <string name="strCategoriaArtista">Plastic artist</string>
+    <string name="strPaisArtista">Nicaragua</string>
+    <string name="strHora1">09:00AM</string>
+    <string name="strEventoCategoria">Oil Painting</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="strMapaUbicacion">Geographic Location Map</string>
+</resources>
+

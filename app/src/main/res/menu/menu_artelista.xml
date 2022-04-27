@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mfragmentHome"
+        android:title="Inicio"
+        android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/mfragmentGaleria"
+        android:title="Galeria"
+        android:icon="@drawable/ic_galeria"/>
+    <item android:id="@+id/mfragmentArtista"
+        android:title="Artista"
+        android:icon="@drawable/ic_artista"/>
+    <item android:id="@+id/mfragmentEvento"
+        android:title="Eventos"
+        android:icon="@drawable/ic_evento"/>
+</menu>

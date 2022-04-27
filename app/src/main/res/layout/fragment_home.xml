@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/img"
+    tools:context=".View.fragmentHome">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvTituloArteLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:textSize="@dimen/tamtexto1"
+        android:gravity="center"
+        android:text="@string/strTituloHome"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    
+    <TextView
+        android:id="@+id/tvTituloVistasHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strTituloHomeVistas"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tamtexto2"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloArteLista">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

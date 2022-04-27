@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mfragmentHome">
+
+    <fragment
+        android:id="@+id/mfragmentHome"
+        android:name="com.example.laboratoriono5_6.View.fragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentGaleria"
+            app:destination="@id/mfragmentGaleria" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfragmentArtista"
+        android:name="com.example.laboratoriono5_6.View.fragmentArtista"
+        android:label="fragment_artista"
+        tools:layout="@layout/fragment_artista" >
+        <action
+            android:id="@+id/action_fragmentArtista_to_fragmentEvento"
+            app:destination="@id/mfragmentEvento" />
+        <action
+            android:id="@+id/action_fragmentArtista_to_fragmentArtistaDetalle"
+            app:destination="@id/mfragmentArtistaDetalle" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfragmentGaleria"
+        android:name="com.example.laboratoriono5_6.View.fragmentGaleria"
+        android:label="fragment_galeria"
+        tools:layout="@layout/fragment_galeria" >
+        <action
+            android:id="@+id/action_fragmentGaleria_to_fragmentArtista"
+            app:destination="@id/mfragmentArtista" />
+        <action
+            android:id="@+id/action_fragmentGaleria_to_fragmentGaleriaDetalle"
+            app:destination="@id/mfragmentGaleriaDetalle" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfragmentEvento"
+        android:name="com.example.laboratoriono5_6.View.fragmentEvento"
+        android:label="fragment_evento"
+        tools:layout="@layout/fragment_evento" >
+        <action
+            android:id="@+id/action_fragmentEvento_to_fragmentEventoUbicacion"
+            app:destination="@id/mfragmentEventoUbicacion" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfragmentGaleriaDetalle"
+        android:name="com.example.laboratoriono5_6.View.fragmentGaleriaDetalle"
+        android:label="fragment_galeria_detalle"
+        tools:layout="@layout/fragment_galeria_detalle" />
+    <fragment
+        android:id="@+id/mfragmentArtistaDetalle"
+        android:name="com.example.laboratoriono5_6.View.fragmentArtistaDetalle"
+        android:label="fragment_artista_detalle"
+        tools:layout="@layout/fragment_artista_detalle" />
+    <fragment
+        android:id="@+id/mfragmentEventoUbicacion"
+        android:name="com.example.laboratoriono5_6.View.fragmentEventoUbicacion"
+        android:label="fragment_evento_ubicacion"
+        tools:layout="@layout/fragment_evento_ubicacion" />
+</navigation>
