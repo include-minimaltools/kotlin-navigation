@@ -43,21 +43,16 @@ class fragmentArtista : Fragment(), artistaListener {
 
     private fun GetArtista(): MutableList<artista>{
         val artistaList: MutableList<artista> = ArrayList()
-        artistaList.add(artista("Haniel Herrera","Oleo","Nicaragua"))
-        artistaList.add(artista("Jesús Cuenca","Grafito", "Costa Rica"))
-        artistaList.add(artista("Pol Ledent", "Acrílico", "Guatemala"))
-        artistaList.add(artista("Maribel Flores", "Arte plástico", "Honduras"))
-        artistaList.add(artista("Nana Tchelidze", "Oleo", "El Salvador"))
-        artistaList.add(artista("Lola Cortés","Acrílico","Nicaragua"))
-        artistaList.add(artista("María López","Grafito", "Chile"))
-        artistaList.add(artista("Verónica Guardado", "Acrílico", "Nicaragua"))
-        artistaList.add(artista("Johnny Flores", "Arte plástico", "Nicaragua"))
-        artistaList.add(artista("Rosa Manzanares", "Grafito", "Nicaragua"))
-        artistaList.add(artista("Lola Cortés","Acrílico","Nicaragua"))
-        artistaList.add(artista("María López","Grafito", "Chile"))
-        artistaList.add(artista("Verónica Guardado", "Acrílico", "Nicaragua"))
-        artistaList.add(artista("Johnny Flores", "Arte plástico", "Nicaragua"))
-        artistaList.add(artista("Rosa Manzanares", "Grafito", "Nicaragua"))
+        artistaList.add(artista("Robert Lewandoski","Bayern Munich","Alemania"))
+        artistaList.add(artista("Cristiano Ronaldo","Manchester United", "Portugal"))
+        artistaList.add(artista("Peter Cech", "Manchester United", "Alemania"))
+        artistaList.add(artista("Neymar Junior", "Paris Saint-Germain", "Brasil"))
+        artistaList.add(artista("Harry Kane", "Tottenham", "Inglaterra"))
+        artistaList.add(artista("Eden Hazard","Real Madrid","Alemania"))
+        artistaList.add(artista("Vinicius Junior","Real Madrid", "Brasil"))
+        artistaList.add(artista("Lionel Messi", "Paris Saint-Germain", "Argentina"))
+        artistaList.add(artista("Kylian Mbappe", "Parins Saint-Germain", "Francia"))
+        artistaList.add(artista("Adama Toure", "FC Barcelona", "Inglaterra"))
         return artistaList
     }
 }

@@ -44,19 +44,9 @@ class fragmentEvento : Fragment(), eventoListener {
     private fun GetEvento(): MutableList<evento> {
         val eventoList: MutableList<evento> = ArrayList()
 
-        eventoList.add(evento("09:00 AM", "Las mil y una noche","Pintura en Oleo"))
-        eventoList.add(evento("10:00 AM", "La tarde oscura","Pintura en Oleo"))
-        eventoList.add(evento("11:00 AM", "Amanecer","Pintura en Oleo"))
-        eventoList.add(evento("18:00 PM", "Atardecer","Pintura en Oleo"))
-        eventoList.add(evento("20:00 AP", "Las flores","Pintura en Oleo"))
-        eventoList.add(evento("08:00 AM", "Volcán","Pintura en Oleo"))
-        eventoList.add(evento("10:30 AM", "Invierno","Pintura en Oleo"))
-        eventoList.add(evento("08:30 AM", "Romero","Pintura en Oleo"))
-        eventoList.add(evento("16:00 PM", "Limbo","Pintura en Oleo"))
-        eventoList.add(evento("13:00 PM", "Resurrección","Pintura en Oleo"))
-        eventoList.add(evento("11:00 PM", "Romero","Pintura en Oleo"))
-        eventoList.add(evento("12:00 PM", "Resurrección","Pintura en Oleo"))
-        eventoList.add(evento("15:00 PM", "Limbo","Pintura en Oleo"))
+        eventoList.add(evento("01:00 PM", "Villa Real vs Liverpool","Mar, 3/5"))
+        eventoList.add(evento("01:00 PM", "Madrid vs Manchester City","Mar, 4/5"))
+        eventoList.add(evento("01:00 PM", "Final","Mar, 28/5"))
         return eventoList
     }
 }

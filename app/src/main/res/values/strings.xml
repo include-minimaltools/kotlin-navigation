@@ -18,15 +18,15 @@
     <string name="strArtista">Artista</string>
     <string name="strEvento">Exposición Primavera en Oleo</string>
     <string name="strGaleria">Galería</string>
-    <string name="strNombreArtista">Argentina Vargas</string>
-    <string name="strTituloArte">Las mil y una noche</string>
+    <string name="strNombreArtista">Manchester 4 - 3 Madrid</string>
+    <string name="strTituloArte">Partido de Ida</string>
     <string name="strMeGusta">Me gusta</string>
     <string name="strPrecioPintura">1,200.00</string>
     <string name="strMoneda">$</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="strDescripcionArte">Carlos PardoTasies nace en San Josè, Costa Rica en 1952, por azares de la vida ya que su familia radica en Puerto Limòn, provincia del paìs donde se crìa hasta los 6 años. Desde pequeño es impactado por los colores de la provincia habitada en su gran mayorìa por gente de raza negra. Empieza a dibujar desde muy pequeña edad los barcos del muelle y las casuchas del lugar. El impacto del color de las frutas, los amaneceres y las gamas usadas en las casas</string>
-    <string name="strCategoria">Oleo</string>
+    <string name="strDescripcionArte">Trepidante partido en la ida de semifinales de la Liga de Campeones. El Manchester City derrotó al Madrid (4-3) en un partido trepidante, donde el conjunto inglés, líder de la Premier inglesa y entrenado por Pep Guardiola, dio primero en esta serie de semifinales de la competición. No obstante, pudo ser mucho peor para el Madrid, que perdía 2-0 a los 10 minutos y que siempre reaccionó cuando el City iba marcando. Benzema hizo el 2-1, Vinicius luego el 3-2 y todavía Benzema, con 4-2, tiró un penalti a lo Panenka para hacer el 4-3.</string>
+    <string name="strCategoria">UEFA</string>
 
 
     <string name="strNombreArtistaPerfil">Rodrigo Matus Lazo</string>
@@ -40,5 +40,12 @@
     <string name="strEventoCategoria">Pintura en Oleo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="strMapaUbicacion">Mapa de Ubicación Geográfica</string>
+
+    <!-- Menu -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_games">Partidos</string>
+    <string name="menu_players">Jugadores</string>
+    <string name="menu_events">Eventos</string>
+
 </resources>
 

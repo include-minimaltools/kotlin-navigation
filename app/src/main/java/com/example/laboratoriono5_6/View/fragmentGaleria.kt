@@ -38,12 +38,12 @@ class fragmentGaleria : Fragment(), galeriaListener {
 
     //Cargar obras de arte
     private fun GetGaleria(): MutableList<pintura>{
-        var galeriaList: MutableList<pintura> = ArrayList()
-        galeriaList.add(pintura("Haniel Herrera","1,600","https://artelista.s3.amazonaws.com/obras/big/3/5/5/1209702-607458d7c0c2a.jpg","Memories"))
-        galeriaList.add(pintura("Jesús Cuenca","1,200", "https://artelista.s3.amazonaws.com/obras/big/1/6/4/1209582.jpg", "Rancio"))
-        galeriaList.add(pintura("Pol Ledent", "1,600", "https://artelista.s3.amazonaws.com/obras/fichas/1/4/6/1209343.jpg", "Como en invierno"))
-        galeriaList.add(pintura("Maribel Flores", "1,600", "https://artelista.s3.amazonaws.com/obras/big/7/4/1/1228034.jpg", "Blossom"))
-        galeriaList.add(pintura("Nana Tchelidze", "575", "https://artelista.s3.amazonaws.com/obras/big/1/1/4/1228154.jpg", "El Puente"))
+        var galeriaList: MutableList<pintura> = arrayListOf(
+            pintura("City 4 - 3 Madrid","1,600","https://as01.epimg.net/futbol/imagenes/2022/04/26/champions/1650948733_580917_1651005910_noticia_normal_recorte1.jpg","Partido de Ida"),
+            pintura("Liverpool 3 - 3 Benfica", "1243", "https://futbolenlinea.club/wp-content/uploads/2022/04/10-cosas-clave-que-debes-saber-antes-del-Benfica-vs.jpg", "Partido de Ida"),
+            pintura("Madrid 2 - 3 Chelsea", "1453", "https://phantom-marca.unidadeditorial.es/d7b8216569c07bbc3bef9f65b0c2f2d2/resize/1320/f/jpg/assets/multimedia/imagenes/2022/04/12/16497917794736.jpg", "Partido de Vuelta"),
+            pintura("Atletico 0 - 0 City", "650", "https://depor.com/resizer/MCe7HI2WXY-suURrO3Z4cpVm-5g=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZA22T2A5WFBEVIXBMIRTP4MRYE.jpg", "Partido de Vuelta")
+        )
         return galeriaList
     }
 

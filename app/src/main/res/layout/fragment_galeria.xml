@@ -11,6 +11,7 @@
         android:id="@+id/rvGaleria"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/margen1"
         android:layout_marginBottom="@dimen/margentop1"/>
 
 </LinearLayout>

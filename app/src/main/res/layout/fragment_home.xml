@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/img">
+    android:background="@drawable/img_uefa_wallpaper"
     tools:context=".View.fragmentHome">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,6 +16,7 @@
         android:textStyle="italic"
         android:textSize="@dimen/tamtexto1"
         android:gravity="center"
+        android:layout_marginHorizontal="@dimen/margen"
         android:text="@string/strTituloHome"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,6 +27,7 @@
         android:id="@+id/tvTituloVistasHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margen"
         android:text="@string/strTituloHomeVistas"
         android:textColor="@color/white"
         android:textSize="@dimen/tamtexto2"

@@ -18,15 +18,15 @@
     <string name="strArtista">Artist</string>
     <string name="strEvento">Spring in Oil Exhibition</string>
     <string name="strGaleria">Gallery</string>
-    <string name="strNombreArtista">Argentina Vargas</string>
-    <string name="strTituloArte">One Thousand and One Nights</string>
+    <string name="strNombreArtista">Madrid 3 - 4 Manchester</string>
+    <string name="strTituloArte">Going match</string>
     <string name="strMeGusta">I like</string>
     <string name="strPrecioPintura">1,200.00</string>
     <string name="strMoneda">$</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="strDescripcionArte">Carlos PardoTasies was born in San Jose, Costa Rica in 1952, by chance of life since his family lives in Puerto Limon, province of the country where he grew up until he was 6 years old. Since he was a child he was impressed by the colors of the province inhabited mostly by black people. He began to draw from a very young age the boats of the dock and the shacks of the place. The impact of the color of the fruits, the sunrises and the shades used in the houses</string>.
-    <string name="strCategoria">Oil</string>
+    <string name="strDescripcionArte">Fast-paced match in the first leg of the Champions League semifinals. Manchester City defeated Madrid (4-3) in a fast-paced match, where the English team, leader of the English Premier and coached by Pep Guardiola, came first in this series of semifinals of the competition. However, it could have been much worse for Madrid, who were down 2-0 after 10 minutes and always reacted when City were scoring. Benzema made it 2-1, Vinicius then made it 3-2 and still Benzema, at 4-2, took a Panenka-style penalty to make it 4-3.</string>.
+    <string name="strCategoria">UEFA</string>
 
 
     <string name="strNombreArtistaPerfil">Rodrigo Matus Lazo</string>
@@ -40,5 +40,12 @@
     <string name="strEventoCategoria">Oil Painting</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="strMapaUbicacion">Geographic Location Map</string>
+
+    <!-- Menu -->
+    <string name="menu_home">Home</string>
+    <string name="menu_games">Games</string>
+    <string name="menu_players">Players</string>
+    <string name="menu_events">Events</string>
+
 </resources>
 
