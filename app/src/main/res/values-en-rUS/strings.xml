@@ -46,6 +46,9 @@
     <string name="menu_games">Games</string>
     <string name="menu_players">Players</string>
     <string name="menu_events">Events</string>
-
+    <string name="strLugarEvento">UNI</string>
+    <string name="strUbicacionEvento">UCA 2 Cuadras abajo</string>
+    <string name="strSitioWebEvento">https://www.uni.edu.ni</string>
+    <string name="strTelefonoEvento">23117222</string>
 </resources>
 

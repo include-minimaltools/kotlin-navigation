@@ -61,5 +61,13 @@
         android:id="@+id/mfragmentEventoUbicacion"
         android:name="com.example.laboratoriono5_6.View.fragmentEventoUbicacion"
         android:label="fragment_evento_ubicacion"
-        tools:layout="@layout/fragment_evento_ubicacion" />
+        tools:layout="@layout/fragment_evento_ubicacion" >
+        <action
+            android:id="@+id/action_mfragmentEventoUbicacion_to_fragmentUbicacionDet"
+            app:destination="@id/mfragmentUbicacionDet" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfragmentUbicacionDet"
+        android:name="com.example.laboratoriono5_6.View.fragmentUbicacionDet"
+        android:label="fragmentUbicacionDet" />
 </navigation>

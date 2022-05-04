@@ -15,7 +15,8 @@ class activityLogin : AppCompatActivity() {
 
     private val accounts:List<Account> = listOf(
         Account("gabrielortizamador@gmail.com", "1234"),
-        Account("luispinedajoseph@gmail.com", "1234")
+        Account("luispinedajoseph@gmail.com", "1234"),
+        Account("l@gmail.com", "1234")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

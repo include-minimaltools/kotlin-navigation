@@ -10,7 +10,6 @@ import com.example.laboratoriono5_6.R
 import com.example.laboratoriono5_6.model.evento
 import com.squareup.picasso.Picasso
 
-
 class adapter_evento(val eventoListener: eventoListener,
                     Evento:MutableList<evento>,
                     resource: Int,
@@ -33,9 +32,9 @@ class adapter_evento(val eventoListener: eventoListener,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val Evento: evento = evento[position]
-        holder.eventoHora.text = Evento.EventoHora
-        holder.eventoNombre.text = Evento.EventoNombre
-        holder.eventoPintura.text = Evento.EventoPintura
+        holder.Hora1.text = Evento.Hora1
+        holder.Evento.text = Evento.EventoLugar
+        holder.EventoCategoria.text = Evento.EventoCategoria
 
         holder.itemView.setOnClickListener { view ->
             eventoListener.onEventoClicked(Evento, position)
@@ -43,14 +42,14 @@ class adapter_evento(val eventoListener: eventoListener,
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val eventoHora: TextView
-        val eventoNombre: TextView
-        val eventoPintura: TextView
+        val Hora1: TextView
+        val Evento: TextView
+        val EventoCategoria: TextView
 
         init {
-            eventoHora = itemView.findViewById<View>(R.id.tvEventoHora1) as TextView
-            eventoNombre = itemView.findViewById<View>(R.id.tvEvento) as TextView
-            eventoPintura = itemView.findViewById<View>(R.id.tvEventoCategoria) as TextView
+            Hora1 = itemView.findViewById<View>(R.id.tvEventoHora1) as TextView
+            Evento = itemView.findViewById<View>(R.id.tvEvento) as TextView
+            EventoCategoria = itemView.findViewById<View>(R.id.tvEventoCategoria) as TextView
         }
     }
 
