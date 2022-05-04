@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="strLugarEvento">UNI</string>
+    <string name="strUbicacionEvento">UCA 2 Cuadras abajo</string>
+    <string name="strSitioWebEvento">https://www.uni.edu.ni</string>
+    <string name="strTelefonoEvento">23117222</string>
+</resources>

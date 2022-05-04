@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "740776211482",
+    "project_id": "artelistakotlin10",
+    "storage_bucket": "artelistakotlin10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740776211482:android:3f2f1819274ef239b30da3",
+        "android_client_info": {
+          "package_name": "com.example.laboratoriono5_6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740776211482-q5pe9avr1vm6ho07nlnv394ellt1gtca.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.laboratoriono5_6",
+            "certificate_hash": "bd2890cc1200d258133bde0eacf69ca73a9efc3f"
+          }
+        },
+        {
+          "client_id": "740776211482-a5euqs9cjhrb4u9rjk3otv4ueadb0vq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuQIlaygXFTRVZhIRnJ0LxoOnwZ05jqh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740776211482-a5euqs9cjhrb4u9rjk3otv4ueadb0vq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

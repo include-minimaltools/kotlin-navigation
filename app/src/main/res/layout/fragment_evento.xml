@@ -11,6 +11,7 @@
         android:id="@+id/rv_evento"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/margentop1"/>
+        android:layout_marginBottom="@dimen/margentop1"
+        android:layoutAnimation="@anim/slide_left_in_layout_anim"/>
 
 </LinearLayout>
