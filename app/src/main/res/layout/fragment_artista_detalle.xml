@@ -72,11 +72,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strAcercaDeMi"
-                android:textSize="@dimen/tamtexto3"
+                android:textSize="15sp"
                 android:textColor="@color/purple_500"
                 app:layout_constraintTop_toBottomOf="@id/tvCiudadPerfil"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent">
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="5dp">
             </TextView>
             <Button
                 android:id="@+id/btnAcercaDe"

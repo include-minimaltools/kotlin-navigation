@@ -1,6 +1,4 @@
 package com.example.laboratoriono5_6.View.adapter
-
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,40 +6,41 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.laboratoriono5_6.R
 import com.example.laboratoriono5_6.model.evento
-import com.squareup.picasso.Picasso
 
-class adapter_evento(val eventoListener: eventoListener,
-                    Evento:MutableList<evento>,
-                    resource: Int,
-                    context: Context?): RecyclerView.Adapter<adapter_evento.ViewHolder>() {
-    private val evento: MutableList<evento>
-    private val resource: Int
-    private val context: Context?
+class adapter_evento(val EventoListener: eventoListener):
+                        RecyclerView.Adapter<adapter_evento.EventoViewHolder>() {
 
-    init {
-        this.evento = Evento
-        this.resource = resource
-        this.context = context
+    var listevento = ArrayList<evento>()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_evento, parent, false)
+        return EventoViewHolder(view)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(resource, parent, false)
-        return ViewHolder(view)
-    }
+    override fun onBindViewHolder(holder: EventoViewHolder, position: Int) {
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        val Evento: evento = evento[position]
+        val Evento: evento = listevento[position]
         holder.Hora1.text = Evento.Hora1
         holder.Evento.text = Evento.EventoLugar
-        holder.EventoCategoria.text = Evento.EventoCategoria
+        holder.EventoCategoria.text = Evento.EventoDireccion
 
         holder.itemView.setOnClickListener { view ->
-            eventoListener.onEventoClicked(Evento, position)
+            EventoListener.onEventoClicked(Evento, position)
         }
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    override fun getItemCount(): Int {
+        return listevento.size
+    }
+
+    fun updateData(data:List<evento>)
+    {
+        listevento.clear()
+        listevento.addAll(data)
+        notifyDataSetChanged()
+    }
+
+    inner class EventoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val Hora1: TextView
         val Evento: TextView
         val EventoCategoria: TextView
@@ -51,9 +50,5 @@ class adapter_evento(val eventoListener: eventoListener,
             Evento = itemView.findViewById<View>(R.id.tvEvento) as TextView
             EventoCategoria = itemView.findViewById<View>(R.id.tvEventoCategoria) as TextView
         }
-    }
-
-    override fun getItemCount(): Int {
-        return evento.size
     }
 }

@@ -5,11 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.laboratoriono5_6.R
 import com.example.laboratoriono5_6.View.adapter.adapter_artista
 import com.example.laboratoriono5_6.View.adapter.artistaListener
+import com.example.laboratoriono5_6.Viewmodel.artistaViewmodel
 import com.example.laboratoriono5_6.databinding.FragmentArtistaBinding
 import com.example.laboratoriono5_6.model.artista
 
@@ -17,6 +21,8 @@ class fragmentArtista : Fragment(), artistaListener {
 
     private var fbinding: FragmentArtistaBinding? = null
     private val binding get() = fbinding!!
+    private lateinit var artistaAdapter: adapter_artista
+    private lateinit var viewModel: artistaViewmodel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,19 +31,32 @@ class fragmentArtista : Fragment(), artistaListener {
         fbinding = FragmentArtistaBinding.inflate(layoutInflater)
         val view = binding.root
 
-        val recicleartista = binding.rvArtista
-        val linearmanager = LinearLayoutManager(context)
-        linearmanager.orientation = LinearLayoutManager.VERTICAL
-        recicleartista.layoutManager = linearmanager
+        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(artistaViewmodel::class.java)
+        viewModel.refresh()
+        artistaAdapter = adapter_artista(this)
 
-        //val adapter = adapter_artista(this, GetArtista(), R.layout.item_artista, context)
-        //recicleartista.adapter = adapter
-
+        binding.rvArtista.apply {
+            layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
+            adapter = artistaAdapter
+        }
+        observeViewModel()
         return view
     }
 
+    private fun observeViewModel() {
+        viewModel.listArtista.observe(viewLifecycleOwner, Observer<List<artista>> { artista ->
+            artistaAdapter.updateData(artista)
+        })
+    }
+
     override fun onArtistaClicked(Artista: artista, position: Int) {
-        NavHostFragment.findNavController(this).navigate(R.id.mfragmentArtistaDetalle)
+        val bundle = bundleOf("artistas" to Artista)
+        NavHostFragment.findNavController(this).navigate(R.id.mfragmentArtistaDetalle, bundle)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        fbinding = null
     }
 
 

@@ -13,6 +13,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.navigation.Navigation
 import com.example.laboratoriono5_6.R
 import com.example.laboratoriono5_6.databinding.FragmentArtistaDetalleBinding
+import com.example.laboratoriono5_6.model.artista
 
 class fragmentArtistaDetalle : DialogFragment() {
 
@@ -25,6 +26,12 @@ class fragmentArtistaDetalle : DialogFragment() {
     ): View? {
         fbinding = FragmentArtistaDetalleBinding.inflate(layoutInflater)
         val view = binding.root
+
+        val artista = arguments?.getSerializable("artistas") as artista
+        binding.tvNombrePerfil.text = artista.ArtistaNombre
+        binding.tvDescripcionAcerca.text = artista.ArtistaPerfil
+        binding.tvAcercaDe.text = artista.ArtistaCategoria
+        binding.tvCiudadPerfil.text = artista.ArtistaPais
 
         binding.btnAcercaDe.setOnClickListener{
             if(binding.tvDescripcionAcerca.visibility==View.VISIBLE){
@@ -41,6 +48,7 @@ class fragmentArtistaDetalle : DialogFragment() {
                 }
             }
         }
+
         return view
     }
 
@@ -49,7 +57,7 @@ class fragmentArtistaDetalle : DialogFragment() {
         val toolbar: Toolbar = binding.tooldetalleartista
 
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        toolbar.setTitle("Artista")
+        toolbar.setTitle("Futbolista")
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener{
             dismiss()

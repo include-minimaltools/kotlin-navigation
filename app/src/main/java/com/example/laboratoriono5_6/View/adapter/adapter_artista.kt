@@ -9,27 +9,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.laboratoriono5_6.R
 import com.example.laboratoriono5_6.model.artista
 
-class adapter_artista(val ArtistaListener: artistaListener,
-                      Artista: MutableList<artista>,
-                      resource: Int,
-                      context: Context?) :
-    RecyclerView.Adapter<adapter_artista.ArtistaViewHolder>() {
+class adapter_artista(val ArtistaListener: artistaListener):
+                        RecyclerView.Adapter<adapter_artista.ArtistaViewHolder>() {
 
-    private val artista: MutableList<artista>
-    private val resource:Int
-    private val context: Context?
-    init {
-        this.artista = Artista
-        this.resource = resource
-        this.context = context
-    }
+    var listartista = ArrayList<artista>()
     override fun onCreateViewHolder(parent: ViewGroup, ViewType: Int): ArtistaViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(resource, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_artista, parent, false)
         return ArtistaViewHolder(view)
     }
     override fun onBindViewHolder(holder: ArtistaViewHolder, position: Int) {
         //
-        val Artista: artista = artista[position]
+        val Artista: artista = listartista[position]
         holder.artistaNombre.text = Artista.ArtistaNombre
         holder.artistaCategoria.text =Artista.ArtistaCategoria
         holder.artistaPais.text = Artista.ArtistaPais
@@ -39,11 +29,17 @@ class adapter_artista(val ArtistaListener: artistaListener,
         }
     }
     override fun getItemCount(): Int {
-        return artista.size
+        return listartista.size
+    }
+
+    fun updateData(data:List<artista>)
+    {
+        listartista.clear()
+        listartista.addAll(data)
+        notifyDataSetChanged()
     }
 
     inner class ArtistaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // -----
         val artistaNombre: TextView
         val artistaCategoria: TextView
         val artistaPais: TextView

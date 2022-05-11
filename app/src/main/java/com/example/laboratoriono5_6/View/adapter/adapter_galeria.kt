@@ -19,6 +19,7 @@ class adapter_galeria(val GaleriaListener: galeriaListener):
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_galeria, parent, false)
         return GaleriaViewHolder(view)
     }
+
     override fun onBindViewHolder(holder: GaleriaViewHolder, position: Int) {
 
         val Pintura: pintura = listGaleria[position]
@@ -30,6 +31,7 @@ class adapter_galeria(val GaleriaListener: galeriaListener):
             GaleriaListener.onGaleriaClicked(Pintura, position)
         }
     }
+
     override fun getItemCount(): Int {
         return listGaleria.size
     }

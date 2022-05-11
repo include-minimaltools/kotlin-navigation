@@ -5,46 +5,58 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.laboratoriono5_6.R
 import com.example.laboratoriono5_6.View.adapter.adapter_evento
 import com.example.laboratoriono5_6.View.adapter.eventoListener
+import com.example.laboratoriono5_6.Viewmodel.eventoViewmodel
+import com.example.laboratoriono5_6.databinding.FragmentEventoBinding
 import com.example.laboratoriono5_6.model.evento
 
 class fragmentEvento : Fragment(), eventoListener {
+
+    private var fbinding: FragmentEventoBinding? = null
+    private val binding get() = fbinding!!
+    private lateinit var eventoAdapter: adapter_evento
+    private lateinit var viewModel: eventoViewmodel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_evento, container, false)
+        fbinding = FragmentEventoBinding.inflate(layoutInflater)
+        val view = binding.root
 
-        val recicleevento = view.findViewById<View>(R.id.rv_evento) as RecyclerView
-        val linearmanager = LinearLayoutManager(context)
-        linearmanager.orientation = LinearLayoutManager.VERTICAL
-        recicleevento.layoutManager = linearmanager
+        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(eventoViewmodel::class.java)
+        viewModel.refresh()
+        eventoAdapter = adapter_evento(this)
 
-        //val adapter = adapter_evento(this, GetEvento(), R.layout.item_evento, context)
-        //recicleevento.adapter = adapter
-
+        binding.rvEvento.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = eventoAdapter
+        }
+        observeViewModel()
         return view
     }
 
+    private fun observeViewModel() {
+        viewModel.listEvento.observe(viewLifecycleOwner, Observer<List<evento>> { evento ->
+            eventoAdapter.updateData(evento)
+        })
+    }
+
     override fun onEventoClicked(Evento: evento, position: Int) {
-        val bundle = Bundle()
-
-        bundle.putDouble("Latitud", Evento.EventoLatitud)
-        bundle.putDouble("Longitud",Evento.EventoLongitud)
-        bundle.putString("Lugar", Evento.EventoLugar)
-        bundle.putString("Direccion", Evento.EventoDireccion)
-        bundle.putString("Telefono", Evento.EventoTelefono)
-        bundle.putString("Website", Evento.EventoWebSite)
-        bundle.putString("FotoWeb", Evento.EventoFoto)
-        bundle.putString("Categoria", Evento.EventoCategoria)
-        bundle.putString("Hora", Evento.Hora1)
-
+        val bundle = bundleOf("eventos" to Evento)
         NavHostFragment.findNavController(this).navigate(R.id.mfragmentEventoUbicacion, bundle)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        fbinding = null
     }
 
     /*private fun GetEvento(): MutableList<evento> {
