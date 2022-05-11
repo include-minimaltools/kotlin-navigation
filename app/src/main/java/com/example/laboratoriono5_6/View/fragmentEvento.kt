@@ -44,7 +44,10 @@ class fragmentEvento : Fragment(), eventoListener {
     }
 
     private fun observeViewModel() {
+        binding.shimmerViewContainer.startShimmer()
         viewModel.listEvento.observe(viewLifecycleOwner, Observer<List<evento>> { evento ->
+            binding.shimmerViewContainer.stopShimmer()
+            binding.shimmerViewContainer.visibility = View.GONE
             eventoAdapter.updateData(evento)
         })
     }

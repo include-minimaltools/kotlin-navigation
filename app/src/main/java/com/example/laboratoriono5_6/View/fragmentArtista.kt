@@ -44,7 +44,10 @@ class fragmentArtista : Fragment(), artistaListener {
     }
 
     private fun observeViewModel() {
+        binding.shimmerViewContainer.startShimmer()
         viewModel.listArtista.observe(viewLifecycleOwner, Observer<List<artista>> { artista ->
+            binding.shimmerViewContainer.stopShimmer()
+            binding.shimmerViewContainer.visibility = View.GONE
             artistaAdapter.updateData(artista)
         })
     }

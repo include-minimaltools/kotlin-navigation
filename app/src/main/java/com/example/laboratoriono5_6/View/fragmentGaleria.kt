@@ -44,7 +44,10 @@ class fragmentGaleria : Fragment(), galeriaListener {
     }
 
     private fun observeViewModel() {
+        binding.shimmerViewContainer.startShimmer()
         viewModel.listGaleria.observe(viewLifecycleOwner, Observer<List<pintura>> {pintura ->
+            binding.shimmerViewContainer.stopShimmer()
+            binding.shimmerViewContainer.visibility = View.GONE
             galeriaAdapter.updateData(pintura)
         })
     }

@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="rosa">#3562A6</color>
     <color name="colorbackgroundcard">#091442</color>
+    <color name="placeholder_bg">#dddddd</color>
 </resources>
 
