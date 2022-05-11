@@ -35,9 +35,9 @@
             <ImageView
                 android:id="@+id/imgubicacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/logo3_champions"
-                app:layout_behavior="@id/toolubicaciondetalle">
+                android:layout_height="300dp"
+                app:layout_behavior="@id/toolubicaciondetalle"
+                tools:ignore="ContentDescription">
             </ImageView>
             <TextView
                 android:id="@+id/txtLugarEvento"
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtDireccionEvento"
-                android:drawableStart="@drawable/ic_password"
+                android:drawableStart="@drawable/ic_mapa"
                 android:gravity="center|left"
                 android:maxLines="2"
                 android:text="@string/strUbicacionEvento"
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/alto4"
                 android:id="@+id/txtSitioWebEvento"
-                android:drawableStart="@drawable/ic_password"
+                android:drawableStart="@drawable/ic_link"
                 android:gravity="center|left"
                 android:text="@string/strSitioWebEvento"
                 android:paddingLeft="@dimen/margenizq"
@@ -84,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/alto4"
                 android:id="@+id/txtTelefonoEvento"
-                android:drawableStart="@drawable/ic_password"
+                android:drawableStart="@drawable/ic_phone"
                 android:gravity="center|left"
                 android:text="@string/strTelefonoEvento"
                 android:paddingLeft="@dimen/margenizq"
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/alto4"
                 android:id="@+id/txtHoraEvento"
-                android:drawableStart="@drawable/ic_password"
+                android:drawableStart="@drawable/ic_watch"
                 android:gravity="center|left"
                 android:text=""
                 android:paddingLeft="@dimen/margenizq"
