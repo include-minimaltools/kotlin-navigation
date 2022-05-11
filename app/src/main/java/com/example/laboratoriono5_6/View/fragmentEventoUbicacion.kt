@@ -9,11 +9,13 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.example.laboratoriono5_6.R
 import com.example.laboratoriono5_6.databinding.FragmentEventoUbicacionBinding
+import com.example.laboratoriono5_6.model.evento
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -25,12 +27,6 @@ class fragmentEventoUbicacion : DialogFragment(), OnMapReadyCallback, GoogleMap.
     var latitud: Double = 0.0
     var longitud: Double=0.0
     var eventoLugar: String=""
-    var eventoDireccion: String=""
-    var eventoFoto: String=""
-    var eventoWebSite: String=""
-    var eventoTelefono: String=""
-    var eventoCategoria: String=""
-    var eventoHora: String=""
 
     var fbinding: FragmentEventoUbicacionBinding? = null
     private val binding get() = fbinding!!
@@ -39,7 +35,13 @@ class fragmentEventoUbicacion : DialogFragment(), OnMapReadyCallback, GoogleMap.
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        fbinding = FragmentEventoUbicacionBinding.inflate(layoutInflater)
+        fbinding = FragmentEventoUbicacionBinding.inflate(inflater, container, false)
+
+        val evento = arguments?.getSerializable("eventos") as evento
+        latitud = evento.EventoLatitud
+        longitud = evento.EventoLongitud
+        eventoLugar = evento.EventoLugar
+
         val view = binding.root
         return view
     }
@@ -82,16 +84,7 @@ class fragmentEventoUbicacion : DialogFragment(), OnMapReadyCallback, GoogleMap.
         googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireContext(), R.raw.map_style))
     }
     override fun onMarkerClick(googleMap: Marker): Boolean {
-        val bundle = Bundle()
-        bundle.putString("Lugar", eventoLugar)
-        bundle.putString("Direccion", eventoDireccion)
-        bundle.putString("Telefono", eventoTelefono)
-        bundle.putString("Website", eventoWebSite)
-        bundle.putString("FotoWeb", eventoFoto)
-        bundle.putString("Categoria", eventoCategoria)
-        bundle.putString("Hora", eventoHora)
-
-        findNavController(this).navigate(R.id.mfragmentUbicacionDet, bundle)
+        findNavController(this).navigate(R.id.mfragmentUbicacionDet)
         return true
     }
 }
