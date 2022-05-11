@@ -27,6 +27,7 @@ class fragmentEventoUbicacion : DialogFragment(), OnMapReadyCallback, GoogleMap.
     var latitud: Double = 0.0
     var longitud: Double=0.0
     var eventoLugar: String=""
+    private var evento: evento = evento()
 
     var fbinding: FragmentEventoUbicacionBinding? = null
     private val binding get() = fbinding!!
@@ -37,7 +38,7 @@ class fragmentEventoUbicacion : DialogFragment(), OnMapReadyCallback, GoogleMap.
     ): View? {
         fbinding = FragmentEventoUbicacionBinding.inflate(inflater, container, false)
 
-        val evento = arguments?.getSerializable("eventos") as evento
+        this.evento = arguments?.getSerializable("eventos") as evento
         latitud = evento.EventoLatitud
         longitud = evento.EventoLongitud
         eventoLugar = evento.EventoLugar
@@ -84,7 +85,8 @@ class fragmentEventoUbicacion : DialogFragment(), OnMapReadyCallback, GoogleMap.
         googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireContext(), R.raw.map_style))
     }
     override fun onMarkerClick(googleMap: Marker): Boolean {
-        findNavController(this).navigate(R.id.mfragmentUbicacionDet)
+        val bundle = bundleOf("eventos" to this.evento)
+        findNavController(this).navigate(R.id.mfragmentUbicacionDet, bundle)
         return true
     }
 }

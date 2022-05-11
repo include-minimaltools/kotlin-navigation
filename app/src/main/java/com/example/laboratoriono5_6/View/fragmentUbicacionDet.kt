@@ -35,6 +35,15 @@ class fragmentUbicacionDet : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val evento = arguments?.getSerializable("eventos") as evento
+
+        eventoLugar=evento.EventoLugar
+        eventoDireccion=evento.EventoDireccion
+        eventoTelefono=evento.EventoTelefono
+        eventoWebsite=evento.EventoWebSite
+        eventoFoto=evento.EventoFoto
+        eventoHora=evento.Hora1
+
         return inflater.inflate(R.layout.fragment_ubicacion_det, container, false)
     }
 
@@ -52,13 +61,13 @@ class fragmentUbicacionDet : DialogFragment() {
                 Navigation.findNavController(it).navigateUp()
             }
 
-            val evento = arguments?.getSerializable("evento") as evento
-            eventoHora = evento.Hora1
-            eventoLugar = evento.EventoLugar
-            eventoDireccion = evento.EventoDireccion
-            eventoTelefono = evento.EventoTelefono
-            eventoWebsite = evento.EventoWebSite
-            eventoFoto = evento.EventoFoto
+//            val evento = arguments?.getSerializable("evento") as evento
+//            eventoHora = evento.Hora1
+//            eventoLugar = evento.EventoLugar
+//            eventoDireccion = evento.EventoDireccion
+//            eventoTelefono = evento.EventoTelefono
+//            eventoWebsite = evento.EventoWebSite
+//            eventoFoto = evento.EventoFoto
 
 
             val txtLugarEvento: MaterialTextView = view.findViewById(R.id.txtLugarEvento)
