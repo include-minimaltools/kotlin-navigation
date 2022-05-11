@@ -6,9 +6,8 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.laboratoriono5_6.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
-/*import com.example.laboratoriono5_6.databinding.ActivityLoginBinding
 import com.example.laboratoriono5_6.databinding.ActivityMenuBinding
-import com.google.firebase.firestore.FirebaseFirestore
+/*import com.google.firebase.firestore.FirebaseFirestore
 import org.json.JSONArray
 import org.json.JSONObject
 import com.example.laboratoriono5_6.model.artista
@@ -16,13 +15,12 @@ import com.example.laboratoriono5_6.model.evento
 import com.example.laboratoriono5_6.model.pintura*/
 
 class activityMenu : AppCompatActivity() {
-    //private lateinit var binding:ActivityMenuBinding
+    private lateinit var binding:ActivityMenuBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /*binding = ActivityMenuBinding.inflate(layoutInflater)
+        binding = ActivityMenuBinding.inflate(layoutInflater)
         val view = binding.root
-        setContentView(view)*/
-        setContentView(R.layout.activity_menu)
+        setContentView(view)
 
         val menuartelista:BottomNavigationView = findViewById(R.id.bottomNavMenu)
         setupWithNavController(menuartelista, findNavController(this, R.id.frag_navgraph))

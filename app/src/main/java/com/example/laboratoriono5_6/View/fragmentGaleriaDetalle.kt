@@ -11,6 +11,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.Navigation
 import com.example.laboratoriono5_6.databinding.FragmentGaleriaDetalleBinding
+import com.example.laboratoriono5_6.model.pintura
+import com.squareup.picasso.Picasso
 
 class fragmentGaleriaDetalle : DialogFragment() {
 
@@ -23,12 +25,13 @@ class fragmentGaleriaDetalle : DialogFragment() {
     ): View? {
         _binding = FragmentGaleriaDetalleBinding.inflate(inflater, container, false)
         val view = binding.root
-        return view
-    }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        val galeria = arguments?.getSerializable("galerias") as pintura
+        binding.tvNombrePinturaDetalle.text = galeria.TituloPintura
+        binding.CategoriaDetalle.text = galeria.PrecioPintura
+        binding.tvArtistaDetalle.text = galeria.ArtistaPintura
+        Picasso.get().load(galeria.UrlPintura).into(binding.imgdetallearte)
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,7 +39,7 @@ class fragmentGaleriaDetalle : DialogFragment() {
         val toolbar: Toolbar = binding.tooldetallegaleria
 
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        toolbar.setTitle("")
+        toolbar.title = "Partidos"
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener{
             dismiss()
