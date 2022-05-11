@@ -25,8 +25,8 @@ class fragmentEvento : Fragment(), eventoListener {
         linearmanager.orientation = LinearLayoutManager.VERTICAL
         recicleevento.layoutManager = linearmanager
 
-        val adapter = adapter_evento(this, GetEvento(), R.layout.item_evento, context)
-        recicleevento.adapter = adapter
+        //val adapter = adapter_evento(this, GetEvento(), R.layout.item_evento, context)
+        //recicleevento.adapter = adapter
 
         return view
     }
@@ -47,7 +47,7 @@ class fragmentEvento : Fragment(), eventoListener {
         NavHostFragment.findNavController(this).navigate(R.id.mfragmentEventoUbicacion, bundle)
     }
 
-    private fun GetEvento(): MutableList<evento> {
+    /*private fun GetEvento(): MutableList<evento> {
         val eventoList: MutableList<evento> = ArrayList()
         eventoList.add(evento("09:00AM","Universidad Nacional de Ingeniería (UNI)", "Partido de Futbol", "Managua, Nicaragua", 12.132217502029128, -86.26987020617783, "22700973","https://www.uni.edu.ni", "https://lh5.googleusercontent.com/p/AF1QipPBc_8YcZrVDAYJQVNxsFShaUBt1fMXaP524MSk=w408-h306-k-no" ))
         eventoList.add(evento("10:00AM","Palacio Nacional Nicaragua", "Pintura en Oleo", "Managua,Nicaragua",12.155753468843768, -86.27181158240545, "22700973","https://www.uni.edu.ni", "https://lh5.googleusercontent.com/p/AF1QipPSqNF77DzZ4u7OR7td8djndBhv2oZIBqpZ98Sr=w408-h306-k-no" ))
@@ -58,5 +58,5 @@ class fragmentEvento : Fragment(), eventoListener {
         eventoList.add(evento("09:30AM","Centro de Arte Fundación Ortiz Gurdián", "Oleo", "León, Nicaragua",12.435021697165867, -86.8819260032871, "+505 22700973","http://www.fundacionortizgurdian.org", "https://lh5.googleusercontent.com/p/AF1QipNnjAmM3pSJF3lQBM_izBl2NW2FPnx7KeT9hehA=w426-h240-k-no" ))
         eventoList.add(evento("10:00PM","Gabriel House", "Party", "Leche Agria Muu, Managua",12.1205678, -86.2099729, "+505 22700973","http://www.uni.edu.ni", "https://elcomercio.pe/resizer/pfVziOV4X8Vu9nwknDc-oNItlB8=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/6Y2EDIISGFGVFANEVDCR5LCG34.jpg" ))
         return eventoList
-    }
+    }*/
 }

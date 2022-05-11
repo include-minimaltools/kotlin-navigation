@@ -30,8 +30,8 @@ class fragmentArtista : Fragment(), artistaListener {
         linearmanager.orientation = LinearLayoutManager.VERTICAL
         recicleartista.layoutManager = linearmanager
 
-        val adapter = adapter_artista(this, GetArtista(), R.layout.item_artista, context)
-        recicleartista.adapter = adapter
+        //val adapter = adapter_artista(this, GetArtista(), R.layout.item_artista, context)
+        //recicleartista.adapter = adapter
 
         return view
     }
@@ -41,18 +41,18 @@ class fragmentArtista : Fragment(), artistaListener {
     }
 
 
-    private fun GetArtista(): MutableList<artista>{
+    /*private fun GetArtista(): MutableList<artista>{
         val artistaList: MutableList<artista> = ArrayList()
-        artistaList.add(artista("Robert Lewandoski","Bayern Munich","Alemania"))
-        artistaList.add(artista("Cristiano Ronaldo","Manchester United", "Portugal"))
-        artistaList.add(artista("Peter Cech", "Manchester United", "Alemania"))
-        artistaList.add(artista("Neymar Junior", "Paris Saint-Germain", "Brasil"))
-        artistaList.add(artista("Harry Kane", "Tottenham", "Inglaterra"))
-        artistaList.add(artista("Eden Hazard","Real Madrid","Alemania"))
-        artistaList.add(artista("Vinicius Junior","Real Madrid", "Brasil"))
-        artistaList.add(artista("Lionel Messi", "Paris Saint-Germain", "Argentina"))
-        artistaList.add(artista("Kylian Mbappe", "Parins Saint-Germain", "Francia"))
-        artistaList.add(artista("Adama Toure", "FC Barcelona", "Inglaterra"))
+        artistaList.add(artista("Robert Lewandoski","Bayern Munich","Alemania","Jugador del Bayer de Munich"))
+        artistaList.add(artista("Cristiano Ronaldo","Manchester United", "Portugal", "Jugador del Manchester United"))
+        artistaList.add(artista("Peter Cech", "Manchester United", "Alemania", "Jugador del Manchester United"))
+        artistaList.add(artista("Neymar Junior", "Paris Saint-Germain", "Brasil", "Jugador del Paris Saint-Germain"))
+        artistaList.add(artista("Harry Kane", "Tottenham", "Inglaterra", "Jugador del Tottenham"))
+        artistaList.add(artista("Eden Hazard","Real Madrid","Alemania", "Jugador del Real Madrid"))
+        artistaList.add(artista("Vinicius Junior","Real Madrid", "Brasil", "Jugador del Real Madrid"))
+        artistaList.add(artista("Lionel Messi", "Paris Saint-Germain", "Argentina", "Jugador del Paris Saint-Germain"))
+        artistaList.add(artista("Kylian Mbappe", "Parins Saint-Germain", "Francia", "Jugador del Paris Saint-Germain"))
+        artistaList.add(artista("Adama Toure", "FC Barcelona", "Inglaterra", "Jugador del FC Barcelona"))
         return artistaList
-    }
+    }*/
 }

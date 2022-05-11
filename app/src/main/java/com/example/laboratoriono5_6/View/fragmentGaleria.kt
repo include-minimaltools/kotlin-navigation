@@ -26,8 +26,8 @@ class fragmentGaleria : Fragment(), galeriaListener {
         reciclergaleria.layoutManager = linearmanager
 
         //-----
-        val adapter = adapter_galeria(this, GetGaleria(), R.layout.item_galeria, context)
-        reciclergaleria.adapter = adapter
+        //val adapter = adapter_galeria(this, GetGaleria(), R.layout.item_galeria, context)
+        //reciclergaleria.adapter = adapter
         return view
     }
 
@@ -37,7 +37,7 @@ class fragmentGaleria : Fragment(), galeriaListener {
     }
 
     //Cargar obras de arte
-    private fun GetGaleria(): MutableList<pintura>{
+    /*private fun GetGaleria(): MutableList<pintura>{
         var galeriaList: MutableList<pintura> = arrayListOf(
             pintura("City 4 - 3 Madrid","1,600","https://as01.epimg.net/futbol/imagenes/2022/04/26/champions/1650948733_580917_1651005910_noticia_normal_recorte1.jpg","Partido de Ida"),
             pintura("Liverpool 3 - 3 Benfica", "1243", "https://futbolenlinea.club/wp-content/uploads/2022/04/10-cosas-clave-que-debes-saber-antes-del-Benfica-vs.jpg", "Partido de Ida"),
@@ -45,6 +45,5 @@ class fragmentGaleria : Fragment(), galeriaListener {
             pintura("Atletico 0 - 0 City", "650", "https://depor.com/resizer/MCe7HI2WXY-suURrO3Z4cpVm-5g=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZA22T2A5WFBEVIXBMIRTP4MRYE.jpg", "Partido de Vuelta")
         )
         return galeriaList
-    }
-
+    }*/
 }
